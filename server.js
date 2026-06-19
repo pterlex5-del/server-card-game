@@ -160,7 +160,7 @@ const ALL_PROVINCES = [
         { name: "Angklung",                   type: "Alat Musik",          rarity: "uncommon",    power: 4 },
         { name: "Tari Jaipong",               type: "Tarian",              rarity: "uncommonplus",power: 3 },
         { name: "Seren Taun",                 type: "Adat Istiadat",       rarity: "commonplus",  power: 2 },
-        { name: "Seblak",                     type: "Makanan Khas",        rarity: "common",      power: 1 },
+        { name: "Karedok",                    type: "Makanan Khas",        rarity: "common",      power: 1 },
     ]},
     { name: "Banten", cards: [
         { name: "Baja & Industri",            type: "Sumber Daya Alam",        rarity: "mythic",      power: 10 },
@@ -292,7 +292,7 @@ const ALL_PROVINCES = [
         { name: "Sape Kaltim",                type: "Alat Musik",          rarity: "uncommon",    power: 4 },
         { name: "Tari Gong",                  type: "Tarian",              rarity: "uncommonplus",power: 3 },
         { name: "Erau",                       type: "Adat Istiadat",       rarity: "commonplus",  power: 2 },
-        { name: "Nasi Kuning",                type: "Makanan Khas",        rarity: "common",      power: 1 },
+        { name: "Ayam Cincane",               type: "Makanan Khas",        rarity: "common",      power: 1 },
     ]},
     { name: "Kalimantan Utara", cards: [
         { name: "Gas Alam & Kelapa Sawit",    type: "Sumber Daya Alam",        rarity: "mythic",      power: 10 },
@@ -464,7 +464,7 @@ const ALL_PROVINCES = [
     ]},
     { name: "Papua Barat Daya", cards: [
         { name: "Ikan & Mutiara Sorong",      type: "Sumber Daya Alam",        rarity: "mythic",      power: 10 },
-        { name: "Benteng VOC Sorong",         type: "Bangunan Bersejarah", rarity: "legendary",   power: 9 },
+        { name: "Pillbox",                    type: "Bangunan Bersejarah", rarity: "legendary",   power: 9 },
         { name: "Perikanan & Pariwisata",     type: "Sektor Ekonomi",      rarity: "rareplus",    power: 7 },
         { name: "Rumah Kambik",               type: "Rumah Adat",          rarity: "epic",        power: 8 },
         { name: "Pisau Pabarday",             type: "Senjata Tradisional", rarity: "rarestar",    power: 6 },
@@ -472,7 +472,7 @@ const ALL_PROVINCES = [
         { name: "Tifa Pabarday",              type: "Alat Musik",          rarity: "uncommon",    power: 4 },
         { name: "Tari Aluyen",                type: "Tarian",              rarity: "uncommonplus",power: 3 },
         { name: "Injak Piring",               type: "Adat Istiadat",       rarity: "commonplus",  power: 2 },
-        { name: "Udang Karang",               type: "Makanan Khas",        rarity: "common",      power: 1 },
+        { name: "Ikan Kuah Kuning",           type: "Makanan Khas",        rarity: "common",      power: 1 },
     ]},
 ];
 
