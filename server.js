@@ -1074,7 +1074,7 @@ class GameEngine {
             }
         });
 
-        this.broadcastLog(`🎮 Game dimulai! Setiap pemain mendapat 8 kartu (1 kartu tiap rarity: epic → common). Mythic & Legendary hanya via draw card.`);
+        this.broadcastLog(`🎮 Game dimulai! Setiap pemain mendapat 8 kartu (1 kartu tiap rarity: epik → dasar). Mistik & Legendaris hanya via draw card.`);
         setTimeout(() => this.startPhase1(), 500);
     }
 
@@ -1150,7 +1150,7 @@ class GameEngine {
         this.gs.topCard = [card];
         this.gs.phase1Player = 'system';
         this.gs.currentRoundPlays.push({ playerId: 'system', playerName: 'Sistem', card, power: card.power });
-        this.broadcastLog(`🎴 Sistem menjatuhkan ${card.name} (${card.province}) - Power ${card.power}`);
+        this.broadcastLog(`🎴 Sistem menjatuhkan ${card.name} (${card.province}) - Kekuatan ${card.power}`);
         this.broadcastGameState();
         setTimeout(() => this.startPhase2(), 1500);
     }
@@ -1348,7 +1348,7 @@ class GameEngine {
             else if (flags.usedSoloProv)  strategyNote = ' [Lv3: solo-provinsi(dpHabis)]';
             else                          strategyNote = ' [Lv3: terkecil-kedua]';
         }
-        this.broadcastLog(`👤 ${bot.name} menjatuhkan ${card.name} (${card.province}) - Power ${card.power}${strategyNote}`);
+        this.broadcastLog(`👤 ${bot.name} menjatuhkan ${card.name} (${card.province}) - Kekuatan ${card.power}${strategyNote}`);
         this.checkWin(bot);
         this.broadcastGameState();
         setTimeout(() => this.startPhase2(), 1000);
@@ -1485,7 +1485,7 @@ class GameEngine {
         this.gs.topCard.push(card); bot.hasPlayed = true;
         this.updatePower(bot);
         this.gs.currentRoundPlays.push({ playerId: bot.id, playerName: bot.name, card, power: card.power });
-        this.broadcastLog(`👤 ${bot.name} menjatuhkan ${card.name} - Power ${card.power}`);
+        this.broadcastLog(`👤 ${bot.name} menjatuhkan ${card.name} - Kekuatan ${card.power}`);
         this.checkWin(bot);
         this.broadcastGameState();
     }
@@ -1677,7 +1677,7 @@ class GameEngine {
                 bot.hand.push(chosen); bot.mustForcePick = false; bot.hasPlayed = true;
                 this.updatePower(bot);
                 this.gs.currentRoundPlays.push({ playerId: bot.id, playerName: bot.name, card: chosen, power: chosen.power, isForcePickPlay: true });
-                this.broadcastLog(`?? ${bot.name} Mengambil kartu: ${chosen.name} (Power: ${chosen.power})`);
+                this.broadcastLog(`?? ${bot.name} Mengambil kartu: ${chosen.name} (Kekuatan: ${chosen.power})`);
                 this.broadcastGameState();
                 // Jika tidak ada human, cek apakah semua bot sudah selesai lalu endRound
                 if (!humanMustPick) {
@@ -1706,7 +1706,7 @@ class GameEngine {
             this.gs.currentProvince = card.province; this.gs.topCard = [card];
             this.updatePower(player);
             this.gs.currentRoundPlays.push({ playerId: player.id, playerName: player.name, card, power: card.power });
-            this.broadcastLog(`👤 ${player.name} menjatuhkan ${card.name} (${card.province}) - Power ${card.power}`);
+            this.broadcastLog(`👤 ${player.name} menjatuhkan ${card.name} (${card.province}) - Kekuatan ${card.power}`);
             this.checkWin(player); this.broadcastGameState();
             setTimeout(() => this.startPhase2(), 800);
         } else {
@@ -1715,7 +1715,7 @@ class GameEngine {
             player.mustPlayMatching = false;
             this.updatePower(player);
             this.gs.currentRoundPlays.push({ playerId: player.id, playerName: player.name, card, power: card.power });
-            this.broadcastLog(`👤 ${player.name} menjatuhkan ${card.name} - Power ${card.power}`);
+            this.broadcastLog(`👤 ${player.name} menjatuhkan ${card.name} - Kekuatan ${card.power}`);
             this.checkWin(player); this.broadcastGameState();
             setTimeout(() => this.checkPhase2End(), 500);
         }
@@ -1811,7 +1811,7 @@ class GameEngine {
         player.hasPlayed = true;
         this.updatePower(player);
         this.gs.currentRoundPlays.push({ playerId: player.id, playerName: player.name, card, power: card.power, isForcePickPlay: true });
-        this.broadcastLog(`👤 ${player.name} Mengambil kartu: ${card.name} (Power: ${card.power})`);
+        this.broadcastLog(`👤 ${player.name} Mengambil kartu: ${card.name} (Kekuatan: ${card.power})`);
         this.gs.forcePickPlayers.filter(p => p.isBot && !p.hasPlayed).forEach(bot => {
             if (this.gs.topCard.length > 0) {
                 const level = bot.botLevel ?? 1;
@@ -1838,7 +1838,7 @@ class GameEngine {
                 bot.hand.push(chosen); bot.mustForcePick = false; bot.hasPlayed = true;
                 this.updatePower(bot);
                 this.gs.currentRoundPlays.push({ playerId: bot.id, playerName: bot.name, card: chosen, power: chosen.power, isForcePickPlay: true });
-                this.broadcastLog(`👤 ${bot.name} Mengambil kartu: ${chosen.name} (Power: ${chosen.power})`);
+                this.broadcastLog(`👤 ${bot.name} Mengambil kartu: ${chosen.name} (Kekuatan: ${chosen.power})`);
             }
         });
         this.gs.forcePickMode = false;
